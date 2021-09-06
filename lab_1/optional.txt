@@ -1,0 +1,32 @@
+OPTIONAL QUERIES AND OUTPUTS:
+
+11. Class teacher wants to find the student name and rollno with the maximum avg in all subjects. ( google sum or avg)
+OUTPUT:
++--------+--------+
+| name   | rollno |
++--------+--------+
+| dwayne |     33 |
++--------+--------+
+
+12. An inquisitive student wants to find out the names of students whose names have the letter ‘a’ in the second position of their name
+OUTPUT:
++-------+
+| name  |
++-------+
+| dave  |
+| randy |
+| kane  |
++-------+
+
+13. A math faculty wants to focus on the weak students first so he wants to see the names and marks of the students in asc order of mark
+OUTPUT:
++--------+------+
+| name   | math |
++--------+------+
+| dave   |   54 |
+| randy  |   69 |
+| john   |   70 |
+| tom    |   76 |
+| kane   |   86 |
+| dwayne |   98 |
++--------+------+
