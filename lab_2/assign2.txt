@@ -1,0 +1,84 @@
+QUERIES AND OUTPUTS:
+
+1. Suppose we are having a vaccination drive and someone suggests we give the vaccines as per age.
+We want to vaccinate the eldest student first and youngest last with nobody under 18( as there
+might be people under 18). Make a list containing name, rno and age in descending order of age.
+OUTPUT:
++---------+--------+------+
+| name    | rollno | age  |
++---------+--------+------+
+| dave    |     27 |   22 |
+| kane    |     11 |   22 |
+| dwayne  |     33 |   21 |
+| tom     |     50 |   21 |
+| carol   |      7 |   21 |
+| jean    |     46 |   21 |
+| randy   |     56 |   20 |
+| wanda   |     21 |   20 |
+| natasha |     52 |   20 |
+| gamora  |     34 |   20 |
+| john    |     58 |   19 |
++---------+--------+------+
+
+2. Suppose the college was holding an event for sports for the students, one of the sports sections
+has a minimum age of 20 years for participating. Now give a count of women and men separately
+that qualify for this event from the students table. 
+OUTPUT:
++------------+
+| male_count |
++------------+
+|          2 |
++------------+
+
++--------------+
+| female_count |
++--------------+
+|            3 |
++--------------+
+
+3. Display number of students whose maths score is more than the class avg score in all subjects.
+OUTPUT:
++----------------------+
+| math_greaterthan_avg |
++----------------------+
+|                    5 |
++----------------------+
+
+4. Suppose the university expansion team was looking at how they should expand further and in
+what areas of the country. As of now they currently need the ratio of campus capacity that is in
+the south to the west zone of the country. 
+OUTPUT:
++------------------+
+| south_west_ratio |
++------------------+
+|           1.6250 |
++------------------+
+
+5. This year the college has decided to not only award the student who came first in the college(from
+any batch/joining yrs) but also the student who has come second. Find the student who has the
+second highest avg in the table.
+OUTPUT:
++------+---------+
+| name | average |
++------+---------+
+| jean | 87.6000 |
++------+---------+
+
+6. Display student’s name, rno, avg marks (“avg_marks”), score status (“score_status”) where score
+status is “High” if above average and “Low” if below average. 
+OUTPUT:
++---------+--------+-----------+--------------+
+| name    | rollno | avg_marks | score_status |
++---------+--------+-----------+--------------+
+| dwayne  |     33 |   86.8000 | High         |
+| john    |     58 |   79.8000 | High         |
+| dave    |     27 |   78.6000 | Low          |
+| randy   |     56 |   74.8000 | Low          |
+| kane    |     11 |   72.6000 | Low          |
+| tom     |     50 |   75.4000 | Low          |
+| carol   |      7 |   73.2000 | Low          |
+| wanda   |     21 |   60.4000 | Low          |
+| natasha |     52 |   89.6000 | High         |
+| gamora  |     34 |   87.0000 | High         |
+| jean    |     46 |   87.6000 | High         |
++---------+--------+-----------+--------------+
