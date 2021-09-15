@@ -8,8 +8,8 @@ select name,rollno,year(curdate()) - year(dob) as age from student where (year(c
 -- 2. Suppose the college was holding an event for sports for the students, one of the sports sections
 -- has a minimum age of 20 years for participating. Now give a count of women and men separately
 -- that qualify for this event from the students table. 
-select count(*) as male_count from student where gender = "M" and year(curdate())-year(dob)<=20;
-select count(*) as female_count from student where gender = "F" and year(curdate())-year(dob)<=20;
+select count(*) as male_count from student where gender = "M" and year(curdate())-year(dob)>=20;
+select count(*) as female_count from student where gender = "F" and year(curdate())-year(dob)>=20;
 
 -- 3. Display number of students whose maths score is more than the class avg score in all subjects.
 select count(*) as math_greaterthan_avg from student where math>(select avg((math+sci+eng+social+sports)/5) from student);
