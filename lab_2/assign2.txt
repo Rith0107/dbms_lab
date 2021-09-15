@@ -27,13 +27,13 @@ OUTPUT:
 +------------+
 | male_count |
 +------------+
-|          2 |
+|          5 |
 +------------+
 
 +--------------+
 | female_count |
 +--------------+
-|            3 |
+|            5 |
 +--------------+
 
 3. Display number of students whose maths score is more than the class avg score in all subjects.
