@@ -45,6 +45,7 @@ OUTPUT:
 +------+---------------+
 
 Q4. Display data in the following format using Group By and Order By
+OUTPUT:
 +---------+--------+------------+-------+--------+------+------+------+------+--------+--------+
 | name    | rollno | dob        | yjoin | gender | team | math | sci  | eng  | social | sports |
 +---------+--------+------------+-------+--------+------+------+------+------+--------+--------+
