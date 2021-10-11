@@ -1,0 +1,143 @@
+UPDATED TABLES:
+
+1) Design a table marks_sem1.
+a. It must contain all marks as seen in the student table.
+b. One way to go about this is to create a copy of the student table and drop columns.
+c. Make roll number the primary key
+
+TABLE:-
+
++--------+------+------+------+--------+--------+
+| rollno | math | sci  | eng  | social | sports |
++--------+------+------+------+--------+--------+
+|      7 |   78 |   99 |   45 |     56 |     88 |
+|     11 |   86 |   95 |   52 |     57 |     73 |
+|     21 |   42 |   73 |   59 |     63 |     65 |
+|     27 |   54 |   68 |   98 |     96 |     77 |
+|     33 |   98 |   94 |   91 |     96 |     55 |
+|     34 |   84 |   93 |   79 |     94 |     85 |
+|     46 |   98 |   97 |   84 |     87 |     72 |
+|     50 |   76 |   84 |   62 |     74 |     81 |
+|     52 |   83 |   86 |   89 |     91 |     99 |
+|     56 |   69 |   75 |   65 |     67 |     98 |
+|     58 |   70 |   87 |   77 |     98 |     67 |
++--------+------+------+------+--------+--------+
+
+DESCRIPTION :-
+
++--------+------+------+-----+---------+-------+
+| Field  | Type | Null | Key | Default | Extra |
++--------+------+------+-----+---------+-------+
+| rollno | int  | NO   | PRI | NULL    |       |
+| math   | int  | YES  |     | NULL    |       |
+| sci    | int  | YES  |     | NULL    |       |
+| eng    | int  | YES  |     | NULL    |       |
+| social | int  | YES  |     | NULL    |       |
+| sports | int  | YES  |     | NULL    |       |
++--------+------+------+-----+---------+-------+
+
+2) Design a table faculty
+a. Add columns and rows with given constraints
+
+TABLE:-
+
++---------+------+---------+
+| name    | fid  | subject |
++---------+------+---------+
+| kakashi | 4003 | math    |
+| guy     | 5002 | sports  |
+| kurenai | 5038 | eng     |
++---------+------+---------+
+
+DESCRIPTION:-
+
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| name    | varchar(20) | YES  |     | NULL    |       |
+| fid     | char(4)     | NO   | PRI | NULL    |       |
+| subject | varchar(20) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+
+3) Design a table sem1
+a. Add columns and rows with given constraints
+
+TABLE:-
+
++---------+---------+------+------+--------+
+| subj_id | subject | fid  | cap  | campus |
++---------+---------+------+------+--------+
+| 101     | math    | 4003 |   60 |    101 |
+| 102     | sports  | 5002 |   70 |    101 |
+| 105     | eng     | 5038 |   60 |    104 |
++---------+---------+------+------+--------+
+
+DESCRIPTION:-
+
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| subj_id | char(4)     | NO   | PRI | NULL    |       |
+| subject | varchar(20) | YES  |     | NULL    |       |
+| fid     | char(4)     | YES  | MUL | NULL    |       |
+| cap     | int         | YES  |     | NULL    |       |
+| campus  | int         | YES  | MUL | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+
+4) Update campus table
+a. Make cid primary key
+
+DESCRIPTION :-
+
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| name    | varchar(20) | YES  |     | NULL    |       |
+| cid     | int         | NO   | PRI | NULL    |       |
+| loc     | varchar(20) | YES  |     | NULL    |       |
+| pincode | int         | YES  |     | NULL    |       |
+| cap     | int         | YES  |     | NULL    |       |
+| law     | tinyint(1)  | YES  |     | NULL    |       |
+| engg    | tinyint(1)  | YES  |     | NULL    |       |
+| buss    | tinyint(1)  | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+
+5) Update student table
+a. Drop not required columns (as shown below)
+b. Add fk to rollno to sem1 rollno
+c. Add cid
+d. Add fk to cid to campus cid
+
+TABLE :-
+
++---------+--------+------------+-------+--------+------+------+
+| name    | rollno | dob        | yjoin | gender | team | cid  |
++---------+--------+------------+-------+--------+------+------+
+| dwayne  |     33 | 2000-01-09 |  2019 | M      | R    |  109 |
+| john    |     58 | 2002-03-21 |  2019 | M      | W    |  101 |
+| dave    |     27 | 1999-09-11 |  2018 | M      | A    |  110 |
+| randy   |     56 | 2001-04-28 |  2019 | M      | R    |  104 |
+| kane    |     11 | 1999-02-13 |  2018 | M      | G    |  104 |
+| tom     |     50 | 2000-11-01 |  2019 | M      | W    |  101 |
+| carol   |      7 | 2000-06-19 |  2018 | F      | W    |  113 |
+| wanda   |     21 | 2001-08-10 |  2019 | F      | R    |  107 |
+| natasha |     52 | 2001-06-19 |  2019 | F      | A    |  109 |
+| gamora  |     34 | 2001-06-19 |  2018 | F      | G    |  109 |
+| jean    |     46 | 2000-06-19 |  2019 | F      | G    |  110 |
++---------+--------+------------+-------+--------+------+------+
+
+
+
+TABLE DESCRIPTION :-
+
++--------+-------------+------+-----+------------+-------+
+| Field  | Type        | Null | Key | Default    | Extra |
++--------+-------------+------+-----+------------+-------+
+| name   | varchar(20) | YES  |     | NULL       |       |
+| rollno | int         | YES  | MUL | NULL       |       |
+| dob    | date        | YES  |     | 2001-01-01 |       |
+| yjoin  | year        | YES  |     | 2019       |       |
+| gender | varchar(1)  | YES  |     | M          |       |
+| team   | varchar(1)  | YES  |     | R          |       |
+| cid    | int         | YES  | MUL | NULL       |       |
++--------+-------------+------+-----+------------+-------+
